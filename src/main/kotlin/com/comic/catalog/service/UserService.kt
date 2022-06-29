@@ -12,7 +12,7 @@ import java.util.*
 class UserService(private val repository: UserRepository, private val messageSource: MessageSource) {
 
     fun findById(id: Long): User {
-        return repository.findById(id).orElseThrow{ EntityNotFoundException(messageSource.getMessage(MessageEnum.ENTITY_NOT_FOUND.message,arrayOf(User::class.toString(),id),Locale.ROOT)) }
+        return repository.findById(id).orElseThrow{ EntityNotFoundException(messageSource.getMessage(MessageEnum.ENTITY_NOT_FOUND.message,arrayOf(User::class.simpleName,id),Locale.getDefault())) }
     }
 
     fun save(user: User): User {
