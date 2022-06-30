@@ -18,4 +18,9 @@ class UserResource (private val service: UserService) {
         return service.save(user);
     }
 
+    @DeleteMapping("{id}")
+    fun deleteById(@PathVariable id: Long) {
+        service.deleteById(id)
+    }
+
 }

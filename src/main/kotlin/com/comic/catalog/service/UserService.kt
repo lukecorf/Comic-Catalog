@@ -19,4 +19,8 @@ class UserService(private val repository: UserRepository, private val messageSou
         return repository.save(user)
     }
 
+    fun deleteById(id: Long) {
+        repository.deleteById(id)
+    }
+
 }

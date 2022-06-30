@@ -12,9 +12,6 @@
             <column name="NAME" type="VARCHAR(255)" remarks="Course name.">
                 <constraints nullable="false"/>
             </column>
-            <column name="CATEGORY" type="VARCHAR(155)" remarks="User name.">
-                <constraints nullable="false"/>
-            </column>
             <column name="EMAIL" type="VARCHAR(155)" remarks="User e-mail.">
                 <constraints nullable="false"/>
             </column>

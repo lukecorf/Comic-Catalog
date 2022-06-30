@@ -12,7 +12,6 @@ class User (
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_USER")
     @SequenceGenerator(name = "SEQ_USER", sequenceName = "SEQ_USER", allocationSize = 1)
-    @NotNull(message = "The ID param cannot be null")
     @Column(name = "ID")
     var id: Long,
 
